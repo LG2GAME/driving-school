@@ -57,18 +57,20 @@ Strona jest w fazie deweloperskiej. Pełna funkcjonalność i zawartość będą
 
 ## Struktura katalogów
 
+```markdown
 src/
-├── assets/
-├── components/
-├── pages/
-├── styles/
+├── assets
+├── components
+├── pages
+├── styles
 │ ├── \_mixins.scss
 │ ├── \_reset.scss
 │ ├── \_typography.scss
 │ ├── \_variables.scss
-│ └── main.tsx
+│ └── main.scss
 ├── App.tsx
 └── main.tsx
+```
 
 ## Wdrożenie na serwerze
 
