@@ -57,20 +57,37 @@ Strona jest w fazie deweloperskiej. Pełna funkcjonalność i zawartość będą
 
 ## Struktura katalogów
 
+<!-- prettier-ignore-start -->
 ```markdown
-src/
-├── assets
-├── components
-├── pages
-├── styles
-│ ├── \_mixins.scss
-│ ├── \_reset.scss
-│ ├── \_typography.scss
-│ ├── \_variables.scss
-│ └── main.scss
-├── App.tsx
-└── main.tsx
+src
+│   App.tsx
+│   main.tsx
+│   vite-env.d.ts
+├───assets
+├───components
+│   ├───layout
+│   │   │   index.ts
+│   │   ├───navigation
+│   │   │       Navigation.scss
+│   │   │       Navigation.tsx
+│   │   └───page-wrapper
+│   │           PageWrapper.tsx
+│   └───ui
+│       │   index.ts
+│       │
+│       └───button
+│               Button.tsx
+├───pages
+└───styles
+        main.scss
+        _buttons.scss
+        _globals.scss
+        _mixins.scss
+        _reset.scss
+        _typography.scss
+        _variables.scss
 ```
+<!-- prettier-ignore-end -->
 
 ## Wdrożenie na serwerze
 
