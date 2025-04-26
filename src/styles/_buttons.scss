@@ -1,0 +1,17 @@
+@use "mixins" as *;
+@use "variables" as *;
+
+.btn {
+  @include setTransition();
+  background-color: $cl-blue;
+  border-radius: 99px;
+  color: $cl-white;
+  display: flex;
+  font-size: clamp(16px, 3.5vw, 20px);
+  font-weight: 500;
+  padding: clamp(5px, 2vw, 10px) clamp(20px, 5vw, 40px);
+
+  &:hover {
+    @include setScale();
+  }
+}
