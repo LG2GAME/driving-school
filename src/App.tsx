@@ -1,10 +1,11 @@
 import { Navigation, Wrapper } from "./components/layout";
+import { Hero } from "./pages";
 
 const App = () => {
   return (
     <Wrapper>
       <Navigation />
-      text
+      <Hero />
     </Wrapper>
   );
 };
