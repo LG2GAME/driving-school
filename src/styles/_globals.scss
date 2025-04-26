@@ -1,0 +1,9 @@
+@use "mixins" as *;
+
+.container {
+  padding: clamp(15px, 4vw, 20px) clamp(20px, 6vw, 40px);
+
+  @include respond(sm) {
+    padding: 5px;
+  }
+}
