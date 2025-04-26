@@ -9,12 +9,12 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "types": ["node"],
-    "baseUrl": ".",
+    "baseUrl": "src",
     "paths": {
-      "@assets/*": ["src/assets/*"],
-      "@components/*": ["src/components/*"],
-      "@pages/*": ["src/pages/*"],
-      "@styles/*": ["src/styles/*"]
+      "@components/*": ["components/*"],
+      "@pages/*": ["pages/*"],
+      "@assets/*": ["assets/*"],
+      "@styles/*": ["styles/*"]
     }
   }
 }
