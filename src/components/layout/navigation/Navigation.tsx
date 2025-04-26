@@ -7,7 +7,7 @@ import { useState, useCallback } from "react";
 import "./Navigation.scss";
 
 export default function Navigation() {
-  const [expanded, setExpanded] = useState<boolean>(true);
+  const [expanded, setExpanded] = useState<boolean>(false);
 
   const handleExpand = useCallback(() => setExpanded((prev) => !prev), []);
 

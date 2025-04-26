@@ -1,9 +1,20 @@
 @use "mixins" as *;
 
-.container {
+.wrapper {
   padding: clamp(15px, 4vw, 20px) clamp(20px, 6vw, 40px);
 
   @include respond(sm) {
-    padding: 5px;
+    padding: 10px 15px;
+  }
+}
+
+.container {
+  @include minHeight();
+  @include setDisplay(flex, center, center, row);
+  gap: 60px;
+  margin: 30px 0;
+
+  &:nth-child(2) {
+    @include minHeight(79.34vh);
   }
 }
