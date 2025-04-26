@@ -1,4 +1,13 @@
-@import "./reset";
-@import "./variables";
-@import "./typography";
-@import "./mixins";
+@use "globals";
+@use "mixins";
+@use "buttons";
+@use "reset";
+@use "typography";
+@use "variables" as *;
+
+body {
+  background-color: $cl-white;
+  color: $cl-black;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}

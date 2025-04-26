@@ -1,29 +1,40 @@
-header {
-  color: $cl-black;
+@use "mixins" as *;
+
+.logo {
+  font-size: clamp(28px, 6vw, 36px);
+  font-weight: 600;
+}
+
+.nav-item {
+  font-size: clamp(16px, 3.5vw, 20px);
+  font-weight: 500;
+
+  @include respond(lg) {
+    font-size: clamp(18px, 4vw, 24px);
+  }
+}
+
+.header {
   font-size: clamp(36px, 6vw, 44px);
   font-weight: 600;
 }
 
 .side-text {
-  color: $cl-black;
   font-size: clamp(18px, 4vw, 24px);
   font-weight: 400;
 }
 
 .info-text {
-  color: $cl-black;
   font-size: clamp(16px, 3.5vw, 20px);
   font-weight: 400;
 }
 
 .card-header {
-  color: $cl-black;
   font-size: clamp(20px, 4vw, 24px);
   font-weight: 500;
 }
 
 .card-side-text {
-  color: $cl-black;
   font-size: clamp(14px, 3vw, 16px);
   font-weight: 400;
 }
