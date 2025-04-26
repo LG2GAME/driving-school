@@ -53,39 +53,51 @@ Strona jest w fazie deweloperskiej. Pełna funkcjonalność i zawartość będą
 
    ```
 
-   SPliki produkcyjne zostaną zapisane w folderze dist/, gotowe do wdrożenia na serwerze.
+   Pliki produkcyjne zostaną zapisane w folderze dist/, gotowe do wdrożenia na serwerze.
 
 ## Struktura katalogów
 
 <!-- prettier-ignore-start -->
 ```markdown
 src
-│   App.tsx
-│   main.tsx
-│   vite-env.d.ts
-├───assets
-├───components
-│   ├───layout
-│   │   │   index.ts
-│   │   ├───navigation
-│   │   │       Navigation.scss
-│   │   │       Navigation.tsx
-│   │   └───page-wrapper
-│   │           PageWrapper.tsx
-│   └───ui
-│       │   index.ts
-│       │
-│       └───button
-│               Button.tsx
-├───pages
-└───styles
-        main.scss
-        _buttons.scss
-        _globals.scss
-        _mixins.scss
-        _reset.scss
-        _typography.scss
-        _variables.scss
+    │   App.tsx
+    │   main.tsx
+    │   vite-env.d.ts
+    ├───assets
+    │   ├───icons
+    │   └───images
+    ├───components
+    │   ├───layout
+    │   │   │   index.ts
+    │   │   ├───content-section
+    │   │   │       ContentSection.scss
+    │   │   │       ContentSection.tsx
+    │   │   ├───navigation
+    │   │   │       Navigation.scss
+    │   │   │       Navigation.tsx
+    │   │   ├───text-section
+    │   │   │       TextSection.tsx
+    │   │   └───wrapper
+    │   │           Container.tsx
+    │   │           Wrapper.tsx
+    │   └───ui
+    │       │   index.ts
+    │       │
+    │       └───button
+    │               Button.tsx
+    ├───pages
+    │   │   index.ts
+    │   └───hero
+    │           Hero.scss
+    │           Hero.tsx
+    └───styles
+            main.scss
+            _buttons.scss
+            _globals.scss
+            _mixins.scss
+            _reset.scss
+            _typography.scss
+            _variables.scss
 ```
 <!-- prettier-ignore-end -->
 
