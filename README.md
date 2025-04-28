@@ -60,44 +60,46 @@ Strona jest w fazie deweloperskiej. Pełna funkcjonalność i zawartość będą
 <!-- prettier-ignore-start -->
 ```markdown
 src
-    │   App.tsx
-    │   main.tsx
-    │   vite-env.d.ts
-    ├───assets
-    │   ├───icons
-    │   └───images
-    ├───components
-    │   ├───layout
-    │   │   │   index.ts
-    │   │   ├───content-section
-    │   │   │       ContentSection.scss
-    │   │   │       ContentSection.tsx
-    │   │   ├───navigation
-    │   │   │       Navigation.scss
-    │   │   │       Navigation.tsx
-    │   │   ├───text-section
-    │   │   │       TextSection.tsx
-    │   │   └───wrapper
-    │   │           Container.tsx
-    │   │           Wrapper.tsx
-    │   └───ui
-    │       │   index.ts
-    │       │
-    │       └───button
-    │               Button.tsx
-    ├───pages
-    │   │   index.ts
-    │   └───hero
-    │           Hero.scss
-    │           Hero.tsx
-    └───styles
-            main.scss
-            _buttons.scss
-            _globals.scss
-            _mixins.scss
-            _reset.scss
-            _typography.scss
-            _variables.scss
+   │   App.tsx
+   │   main.tsx
+   │   vite-env.d.ts
+   ├───assets
+   │   ├───icons
+   │   │       auto.svg
+   │   │       icons.ts
+   │   │       indywidualny.svg
+   │   │       instruktorzy.svg
+   │   └───images
+   │           images.ts
+   │           kierowca.png
+   ├───components
+   │   ├───layout
+   │   │   │   index.ts
+   │   │   ├───content-wrapper
+   │   │   │       contentWrapper.css.ts
+   │   │   │       ContentWrapper.tsx
+   │   │   ├───navigation
+   │   │   │       navigation.css.ts
+   │   │   │       Navigation.tsx
+   │   │   └───wrapper
+   │   │           wrapper.css.ts
+   │   │           Wrapper.tsx
+   │   └───ui
+   │       │   index.ts
+   │       └───button
+   │               button.css.ts
+   │               Button.tsx
+   ├───hooks
+   │       useMediaQuery.ts
+   ├───pages
+   │   │   index.ts
+   │   └───hero
+   │           hero.css.ts
+   │           Hero.tsx
+   └───styles
+         globals.css.ts
+         index.ts
+         theme.css.ts
 ```
 <!-- prettier-ignore-end -->
 
