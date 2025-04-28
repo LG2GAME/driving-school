@@ -11,9 +11,10 @@
     "types": ["node"],
     "baseUrl": "src",
     "paths": {
-      "@components/*": ["components/*"],
-      "@pages/*": ["pages/*"],
       "@assets/*": ["assets/*"],
+      "@components/*": ["components/*"],
+      "@hooks/*": ["hooks/*"],
+      "@pages/*": ["pages/*"],
       "@styles/*": ["styles/*"]
     }
   }

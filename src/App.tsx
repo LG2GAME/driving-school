@@ -1,12 +1,12 @@
-import { Navigation, Wrapper } from "./components/layout";
+import { Navigation } from "./components/layout";
 import { Hero } from "./pages";
 
 const App = () => {
   return (
-    <Wrapper>
+    <>
       <Navigation />
       <Hero />
-    </Wrapper>
+    </>
   );
 };
 
