@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { HashLink } from "react-router-hash-link";
 
 import { Button } from "@components/ui/index.ts";
@@ -13,6 +13,10 @@ const Navigation = () => {
   const isMobile: boolean = useMediaQuery(mq.lg);
 
   const toggleNavigation = useCallback(() => setIsOpen((prev) => !prev), []);
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
+  }, [isOpen]);
 
   const Burger = () => (
     <div className={styles.burger} onClick={toggleNavigation}>

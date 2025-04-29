@@ -4,15 +4,11 @@ import * as styles from "./wrapper.css";
 
 type WrapperProps = {
   children: ReactNode;
-  isColumn?: boolean;
+  direction?: "row" | "column" | "rowRev" | "columnRev";
 };
 
-const Wrapper = ({ children, isColumn }: WrapperProps) => {
-  return (
-    <section className={styles.wrapper({ dir: isColumn ? "column" : "row" })}>
-      {children}
-    </section>
-  );
-};
+const Wrapper = ({ children, direction = "row" }: WrapperProps) => (
+  <section className={styles.wrapper({ direction })}>{children}</section>
+);
 
 export default Wrapper;

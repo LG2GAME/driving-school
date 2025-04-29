@@ -10,8 +10,6 @@ export const contentWrapper = style({
 
   "@media": {
     [mq.lg]: {
-      alignItems: "center",
-      textAlign: "center",
       width: "100%",
     },
   },

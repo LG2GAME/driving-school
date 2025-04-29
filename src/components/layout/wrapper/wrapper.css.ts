@@ -20,9 +20,11 @@ export const wrapper = recipe({
     },
   },
   variants: {
-    dir: {
+    direction: {
       column: { flexDirection: "column" },
+      columnRev: { flexDirection: "column-reverse" },
       row: { flexDirection: "row" },
+      rowRev: { flexDirection: "row-reverse" },
     },
   },
 });
