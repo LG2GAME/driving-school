@@ -39,7 +39,7 @@ export const vars = createGlobalTheme(":root", {
     sm: "scale(1.025)",
   },
   shadows: {
-    base: "0 6px 12px rgba(0, 0, 0, 0.06)",
+    base: "0 6px 12px rgba(0, 0, 0, 0.08)",
   },
   transition: {
     base: "all 0.3s ease",
