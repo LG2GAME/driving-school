@@ -4,10 +4,14 @@ import * as styles from "./contentWrapper.css";
 
 type ContentWrapperProps = {
   children: ReactNode;
+  variant?: "content" | "grid";
 };
 
-const ContentWrapper = ({ children }: ContentWrapperProps) => (
-  <div className={styles.contentWrapper}>{children}</div>
+const ContentWrapper = ({
+  children,
+  variant = "content",
+}: ContentWrapperProps) => (
+  <div className={styles.contentWrapper({ wrapper: variant })}>{children}</div>
 );
 
 export default ContentWrapper;
