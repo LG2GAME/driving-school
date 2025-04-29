@@ -63,12 +63,15 @@ src
    ├───App.tsx
    ├───assets
    │   ├───data
-   │   │   └───benefitsData.ts
+   │   │   ├───benefitsData.ts
+   │   │   ├───coursesData.ts
+   │   │   └───index.ts
    │   ├───icons
    │   │   ├───auto.svg
    │   │   ├───icons.ts
    │   │   ├───indywidualny.svg
-   │   │   └───instruktorzy.svg
+   │   │   ├───instruktorzy.svg
+   │   │   └───strzalka.svg
    │   └───images
    │       ├───benefity.png
    │       ├───images.ts
@@ -103,6 +106,12 @@ src
    │   ├───benefits
    │   │   ├───Benefits.tsx
    │   │   └───benefits.css.ts
+   │   ├───courses
+   │   │   ├───Courses.tsx
+   │   │   ├───components
+   │   │   │   ├───CourseDetails.tsx
+   │   │   │   └───CourseList.tsx
+   │   │   └───courses.css.ts
    │   ├───hero
    │   │   ├───Hero.tsx
    │   │   └───hero.css.ts
