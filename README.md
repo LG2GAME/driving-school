@@ -60,46 +60,58 @@ Strona jest w fazie deweloperskiej. Pełna funkcjonalność i zawartość będą
 <!-- prettier-ignore-start -->
 ```markdown
 src
-   │   App.tsx
-   │   main.tsx
-   │   vite-env.d.ts
+   ├───App.tsx
    ├───assets
+   │   ├───data
+   │   │   └───benefitsData.ts
    │   ├───icons
-   │   │       auto.svg
-   │   │       icons.ts
-   │   │       indywidualny.svg
-   │   │       instruktorzy.svg
+   │   │   ├───auto.svg
+   │   │   ├───icons.ts
+   │   │   ├───indywidualny.svg
+   │   │   └───instruktorzy.svg
    │   └───images
-   │           images.ts
-   │           kierowca.png
+   │       ├───benefity.png
+   │       ├───images.ts
+   │       └───kierowca.png
    ├───components
    │   ├───layout
-   │   │   │   index.ts
    │   │   ├───content-wrapper
-   │   │   │       contentWrapper.css.ts
-   │   │   │       ContentWrapper.tsx
+   │   │   │   ├───ContentWrapper.tsx
+   │   │   │   └───contentWrapper.css.ts
+   │   │   ├───index.ts
    │   │   ├───navigation
-   │   │   │       navigation.css.ts
-   │   │   │       Navigation.tsx
+   │   │   │   ├───Navigation.tsx
+   │   │   │   └───navigation.css.ts
    │   │   └───wrapper
-   │   │           wrapper.css.ts
-   │   │           Wrapper.tsx
+   │   │       ├───Wrapper.tsx
+   │   │       └───wrapper.css.ts
    │   └───ui
-   │       │   index.ts
-   │       └───button
-   │               button.css.ts
-   │               Button.tsx
+   │       ├───button
+   │       │   ├───Button.tsx
+   │       │   └───button.css.ts
+   │       ├───card
+   │       │   ├───Card.tsx
+   │       │   └───card.css.ts
+   │       ├───index.ts
+   │       └───text-block
+   │           ├───TextBlock.tsx
+   │           └───textBlock.css.ts
    ├───hooks
-   │       useMediaQuery.ts
+   │   └───useMediaQuery.ts
+   ├───main.tsx
    ├───pages
-   │   │   index.ts
-   │   └───hero
-   │           hero.css.ts
-   │           Hero.tsx
-   └───styles
-         globals.css.ts
-         index.ts
-         theme.css.ts
+   │   ├───benefits
+   │   │   ├───Benefits.tsx
+   │   │   └───benefits.css.ts
+   │   ├───hero
+   │   │   ├───Hero.tsx
+   │   │   └───hero.css.ts
+   │   └───index.ts
+   ├───styles
+   │   ├───globals.css.ts
+   │   ├───index.ts
+   │   └───theme.css.ts
+   └───vite-env.d.ts
 ```
 <!-- prettier-ignore-end -->
 
