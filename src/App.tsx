@@ -1,11 +1,12 @@
 import { Navigation } from "./components/layout";
-import { Hero } from "./pages";
+import { Hero, Benefits } from "./pages";
 
 const App = () => {
   return (
     <>
       <Navigation />
       <Hero />
+      <Benefits />
     </>
   );
 };
