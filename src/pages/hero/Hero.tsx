@@ -12,13 +12,14 @@ const Hero = () => {
   const isDesktop: boolean = !useMediaQuery(mq.lg);
 
   return (
-    <Wrapper>
+    <Wrapper id="strona-glowna">
       <ContentWrapper>
         <TextBlock
           header={<>Czas usiąść {isDesktop ? <br /> : null} za kierownicą!</>}
           description="Przestań marzyć o wolności – zapisz się na kurs i zdobądź pewność oraz umiejętności, by cieszyć się jazdą!"
+          as="h1"
         />
-        <ul className={styles.featuresList}>
+        <ul className={styles.featuresList} role="list">
           <li className={styles.featureItem}>
             <img src={icons.indivIco} alt="" />
             Indywidualne podejście
@@ -34,7 +35,11 @@ const Hero = () => {
         </ul>
       </ContentWrapper>
       <div className={styles.imageWrapper}>
-        <img src={images.drvImg} alt="" className={styles.image} />
+        <img
+          src={images.drvImg}
+          alt="Zdjęcie ucznia za kierownicą podczas kursu jazdy"
+          className={styles.image}
+        />
       </div>
     </Wrapper>
   );
