@@ -1,15 +1,16 @@
 import { ReactNode } from "react";
 
-import * as styles from "./TextBlock.css";
+import * as styles from "./textBlock.css";
 
 type TextBlockProps = {
   header: ReactNode;
   description: string;
+  as?: "h1" | "h2" | "h3" | "h4";
 };
 
-const TextBlock = ({ header, description }: TextBlockProps) => (
+const TextBlock = ({ header, description, as: Tag = "h2" }: TextBlockProps) => (
   <>
-    <h2 className={styles.header}>{header}</h2>
+    <Tag className={styles.header}>{header}</Tag>
     <p className={styles.description}>{description}</p>
   </>
 );
