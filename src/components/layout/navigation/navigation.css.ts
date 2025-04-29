@@ -23,7 +23,7 @@ export const burger = style({
     [mq.lg]: { display: "flex" },
   },
 });
-globalStyle(`${burger} div`, {
+globalStyle(`${burger} span`, {
   backgroundColor: vars.colors.black,
   borderRadius: 99,
   height: 3,

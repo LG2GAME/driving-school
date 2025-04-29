@@ -15,34 +15,49 @@ const Navigation = () => {
   const toggleNavigation = useCallback(() => setIsOpen((prev) => !prev), []);
 
   useEffect(() => {
-    document.body.style.overflow = isOpen ? "hidden" : "auto";
-  }, [isOpen]);
+    if (isMobile) document.body.style.overflow = isOpen ? "hidden" : "auto";
+  }, [isMobile, isOpen]);
 
   const Burger = () => (
-    <div className={styles.burger} onClick={toggleNavigation}>
-      <div></div>
-      <div></div>
-      <div></div>
+    <div
+      className={styles.burger}
+      onClick={toggleNavigation}
+      aria-expanded={isOpen}
+      aria-controls="nav-menu"
+      tabIndex={0}
+      onKeyDown={(e) => e.key === "Enter" && toggleNavigation()}
+    >
+      <span />
+      <span />
+      <span />
     </div>
   );
 
   return (
     <nav className={styles.navigation}>
-      <HashLink to="/" className={styles.logo}>
+      <HashLink
+        to="/#strona-glowna"
+        className={styles.logo}
+        onClick={toggleNavigation}
+      >
         Grzegorz Szarek
       </HashLink>
       <Burger />
-      <ul className={styles.menu(isMobile ? { open: isOpen } : undefined)}>
-        <li className={styles.menuItem}>
+      <ul
+        id="nav-menu"
+        className={styles.menu({ open: isMobile ? isOpen : true })}
+        tabIndex={isMobile ? -1 : undefined}
+      >
+        <li className={styles.menuItem} onClick={toggleNavigation}>
           <HashLink to="#dlaczego-my">Dlaczego my?</HashLink>
         </li>
-        <li className={styles.menuItem}>
-          <HashLink to="#oferta">Oferta</HashLink>
+        <li className={styles.menuItem} onClick={toggleNavigation}>
+          <HashLink to="#kursy">Oferta</HashLink>
         </li>
-        <li className={styles.menuItem}>
+        <li className={styles.menuItem} onClick={toggleNavigation}>
           <HashLink to="#o-nas">O nas</HashLink>
         </li>
-        <Button label="Kontakt" to="kontakt" />
+        <Button label="Kontakt" to="#kontakt" onClick={toggleNavigation} />
       </ul>
     </nav>
   );
