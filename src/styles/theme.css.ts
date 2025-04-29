@@ -28,14 +28,18 @@ export const vars = createGlobalTheme(":root", {
     lg: "(width <= 992px)",
     xl: "(width <= 1200px)",
   },
+  radius: {
+    default: "25px",
+  },
   space: {
+    xs: "clamp(10px, 2.5vw, 15px) clamp(20px, 6vw, 30px) clamp(25px, 6vw, 30px) clamp(20px, 6vw, 30px)",
     sm: "clamp(15px, 4vw, 20px) clamp(20px, 6vw, 40px)",
   },
   scale: {
     sm: "scale(1.025)",
   },
   shadows: {
-    base: "0 6px 12px rgba(0, 0, 0, 0.6)",
+    base: "0 6px 12px rgba(0, 0, 0, 0.06)",
   },
   transition: {
     base: "all 0.3s ease",
