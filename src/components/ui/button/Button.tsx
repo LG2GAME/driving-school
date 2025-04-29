@@ -1,17 +1,26 @@
 import { HashLink } from "react-router-hash-link";
 
-import * as styles from "./Button.css.ts";
+import * as styles from "./button.css.ts";
 
 type ButtonProps = {
   label: string;
-  to: string;
+  to?: string;
   onClick?: () => void;
 };
 
-const Button = ({ label, to, onClick }: ButtonProps) => (
-  <HashLink to={`#${to}`} className={styles.button} onClick={onClick}>
-    {label}
-  </HashLink>
-);
+const Button = ({ label, to, onClick }: ButtonProps) => {
+  if (to) {
+    return (
+      <HashLink to={to} className={styles.button} onClick={onClick}>
+        {label}
+      </HashLink>
+    );
+  }
+  return (
+    <button className={styles.button} onClick={onClick}>
+      {label}
+    </button>
+  );
+};
 
 export default Button;
