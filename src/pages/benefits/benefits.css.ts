@@ -39,6 +39,7 @@ export const image = style({
   "@media": {
     [mq.lg]: {
       width: "70%",
+      margin: "0 auto",
     },
     [mq.md]: {
       width: "80%",
