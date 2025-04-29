@@ -4,10 +4,13 @@ import * as styles from "./card.css";
 
 type CardProps = {
   children: ReactNode;
+  isCentered?: boolean;
 };
 
-const Card = ({ children }: CardProps) => (
-  <div className={styles.card}>{children}</div>
+const Card = ({ children, isCentered }: CardProps) => (
+  <article className={styles.card({ isCentered: isCentered })}>
+    {children}
+  </article>
 );
 
 export default Card;
