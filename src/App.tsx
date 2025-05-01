@@ -1,5 +1,5 @@
 import { Navigation } from "./components/layout";
-import { Hero, Benefits, Courses } from "./pages";
+import { Hero, Benefits, Courses, Team } from "./pages";
 
 const App = () => {
   return (
@@ -8,6 +8,7 @@ const App = () => {
       <Hero />
       <Benefits />
       <Courses />
+      <Team />
     </>
   );
 };
