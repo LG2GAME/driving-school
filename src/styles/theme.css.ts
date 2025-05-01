@@ -34,6 +34,7 @@ export const vars = createGlobalTheme(":root", {
   space: {
     xs: "clamp(10px, 2.5vw, 15px) clamp(20px, 6vw, 30px) clamp(25px, 6vw, 30px) clamp(20px, 6vw, 30px)",
     sm: "clamp(15px, 4vw, 20px) clamp(20px, 6vw, 40px)",
+    tile: "clamp(20px, 6vw, 45px) 0",
   },
   scale: {
     sm: "scale(1.025)",
