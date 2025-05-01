@@ -4,7 +4,6 @@ import { recipe } from "@vanilla-extract/recipes";
 export const contentWrapper = recipe({
   base: {
     width: "50%",
-    flexDirection: "column",
 
     "@media": {
       [mq.lg]: {
@@ -35,6 +34,10 @@ export const contentWrapper = recipe({
           },
         },
       },
+    },
+    direction: {
+      row: { flexDirection: "row", width: "100%", height: "50%" },
+      column: { flexDirection: "column" },
     },
   },
 });
