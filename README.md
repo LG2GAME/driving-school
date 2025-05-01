@@ -2,7 +2,7 @@
 
 ## Opis
 
-'Grzegorz Szarek | Nauka Jazdy' (dalej strona) to strona internetowa typu single-page, obecnie będąca w fazie realizacji. Celem projektu jest zaprezentowanie oferty szkoły nauki jazdy w sposób estetyczny i funkcjonalny. Strona będzie zawierać następujące sekcje:
+'Strona internetowa: Grzegorz Szarek | Nauka Jazdy' (dalej strona) to strona internetowa typu single-page, obecnie będąca w fazie realizacji. Celem projektu jest zaprezentowanie oferty szkoły nauki jazdy w sposób estetyczny i funkcjonalny. Strona będzie zawierać następujące sekcje:
 
 - **Home**: Wprowadzenie do strony (w trakcie tworzenia)
 - **Dlaczego my?**: Powody, dla których warto wybrać tę szkołę (w trakcie tworzenia)
@@ -65,7 +65,8 @@ src
    │   ├───data
    │   │   ├───benefitsData.ts
    │   │   ├───coursesData.ts
-   │   │   └───index.ts
+   │   │   ├───index.ts
+   │   │   └───instructorsData.ts
    │   ├───icons
    │   │   ├───auto.svg
    │   │   ├───icons.ts
@@ -74,8 +75,10 @@ src
    │   │   └───strzalka.svg
    │   └───images
    │       ├───benefity.png
+   │       ├───druzyna.png
    │       ├───images.ts
-   │       └───kierowca.png
+   │       ├───kierowca.png
+   │       └───szarek.png
    ├───components
    │   ├───layout
    │   │   ├───content-wrapper
@@ -115,7 +118,15 @@ src
    │   ├───hero
    │   │   ├───Hero.tsx
    │   │   └───hero.css.ts
-   │   └───index.ts
+   │   ├───index.ts
+   │   ├───program
+   │   └───team
+   │       ├───Team.tsx
+   │       ├───desktop-team
+   │       │   └───DesktopTeam.tsx
+   │       ├───mobile-team
+   │       │   └───MobileTeam.tsx
+   │       └───team.css.ts
    ├───styles
    │   ├───globals.css.ts
    │   ├───index.ts
