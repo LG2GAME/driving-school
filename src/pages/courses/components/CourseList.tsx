@@ -12,7 +12,7 @@ type CourseListProps = {
 export const CourseList = ({ onSelect }: CourseListProps) => (
   <>
     {coursesData.map((course: CourseInterface, index: number) => (
-      <Card isCentered key={index}>
+      <Card variant="centered" key={index}>
         <img
           src={icons.carIco}
           alt={`Ikona samochodu dla ${course.title}`}

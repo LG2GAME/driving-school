@@ -10,13 +10,19 @@ export const card = recipe({
     gap: 30,
     padding: vars.space.xs,
     width: "100%",
+    marginBottom: "var(--step-spacing, 0)",
   },
   variants: {
-    isCentered: {
-      true: {
+    variant: {
+      centered: {
         alignItems: "center",
-        height: "100%",
         justifyContent: "center",
+        textAlign: "center",
+      },
+      contact: {
+        padding: vars.space.xsV,
+        flexDirection: "row",
+        alignItems: "center",
       },
     },
   },

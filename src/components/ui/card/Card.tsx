@@ -1,14 +1,17 @@
 import { ReactNode } from "react";
-
 import * as styles from "./card.css";
 
 type CardProps = {
   children: ReactNode;
-  isCentered?: boolean;
+  variant?: "centered" | "contact";
+  stepSpacing?: number;
 };
 
-const Card = ({ children, isCentered }: CardProps) => (
-  <article className={styles.card({ isCentered: isCentered })}>
+const Card = ({ children, variant, stepSpacing = 0 }: CardProps) => (
+  <article
+    className={styles.card({ variant: variant })}
+    style={{ "--step-spacing": `${stepSpacing}px` } as React.CSSProperties}
+  >
     {children}
   </article>
 );

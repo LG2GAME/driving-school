@@ -4,7 +4,7 @@ import * as styles from "./textBlock.css";
 
 type TextBlockProps = {
   header: ReactNode;
-  description: string;
+  description: ReactNode;
   as?: "h1" | "h2" | "h3" | "h4";
 };
 

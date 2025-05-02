@@ -18,7 +18,7 @@ export interface CourseInterface {
 }
 
 const Courses = () => {
-  const isDesktop = !useMediaQuery(mq.lg);
+  const isDesktop: boolean = !useMediaQuery(mq.lg);
   const [selectedOffer, setSelectedOffer] = useState<number | null>(null);
 
   const handleSelectOffer = useCallback((index: number) => {

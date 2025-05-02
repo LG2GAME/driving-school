@@ -12,7 +12,7 @@ export const contentWrapper = recipe({
     },
   },
   variants: {
-    wrapper: {
+    variant: {
       content: {
         display: "flex",
         justifyContent: "center",
@@ -36,7 +36,12 @@ export const contentWrapper = recipe({
       },
     },
     direction: {
-      row: { flexDirection: "row", width: "100%", height: "50%" },
+      row: { flexDirection: "row", width: "100%", minHeight: "50%" },
+      rowEnd: {
+        alignItems: "end",
+        flexDirection: "row",
+        width: "100%",
+      },
       column: { flexDirection: "column" },
     },
   },

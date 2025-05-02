@@ -5,7 +5,7 @@ import * as styles from "./contentWrapper.css";
 type ContentWrapperProps = {
   children: ReactNode;
   variant?: "content" | "grid";
-  direction?: "column" | "row";
+  direction?: "column" | "row" | "rowEnd";
 };
 
 const ContentWrapper = ({
@@ -13,14 +13,14 @@ const ContentWrapper = ({
   variant = "content",
   direction = "column",
 }: ContentWrapperProps) => (
-  <div
+  <section
     className={styles.contentWrapper({
-      wrapper: variant,
+      variant: variant,
       direction: direction,
     })}
   >
     {children}
-  </div>
+  </section>
 );
 
 export default ContentWrapper;
