@@ -17,7 +17,6 @@ const Hero = () => {
         <TextBlock
           header={<>Czas usiąść {isDesktop ? <br /> : null} za kierownicą!</>}
           description="Przestań marzyć o wolności – zapisz się na kurs i zdobądź pewność oraz umiejętności, by cieszyć się jazdą!"
-          as="h1"
         />
         <ul className={styles.featuresList} role="list">
           <li className={styles.featureItem}>
