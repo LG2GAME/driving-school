@@ -31,7 +31,7 @@ const Program = () => {
               variant="centered"
               stepSpacing={isDesktop ? (id - 1) * 45 : undefined}
             >
-              <img src={icon} alt="" />
+              <img src={icon} alt="" aria-hidden="true" />
               <h3>{title}</h3>
               <p>{description}</p>
             </Card>

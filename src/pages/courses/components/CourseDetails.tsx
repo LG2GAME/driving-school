@@ -16,7 +16,7 @@ export const CourseDetails = ({ course, onBack }: CourseDetailsProps) => (
         onClick={onBack}
         aria-label="Wróć do listy kursów"
       >
-        <img src={icons.arrowIco} alt="" />
+        <img src={icons.arrowIco} alt="" aria-hidden="true" />
       </button>
       <h3 className={styles.offerTitle}>{course.title}</h3>
     </div>

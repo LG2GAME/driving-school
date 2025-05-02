@@ -21,15 +21,15 @@ const Hero = () => {
         />
         <ul className={styles.featuresList} role="list">
           <li className={styles.featureItem}>
-            <img src={icons.indivIco} alt="" />
+            <img src={icons.indivIco} alt="" aria-hidden="true" />
             Indywidualne podejście
           </li>
           <li className={styles.featureItem}>
-            <img src={icons.instrIco} alt="" />
+            <img src={icons.instrIco} alt="" aria-hidden="true" />
             Doświadczeni instruktorzy
           </li>
           <li className={styles.featureItem}>
-            <img src={icons.carIco} alt="" />
+            <img src={icons.carIco} alt="" aria-hidden="true" />
             Nowoczesna flota pojazdów
           </li>
         </ul>

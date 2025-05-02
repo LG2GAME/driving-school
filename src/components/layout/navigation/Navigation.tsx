@@ -34,7 +34,7 @@ const Navigation = () => {
   );
 
   return (
-    <nav className={styles.navigation}>
+    <nav className={styles.navigation} aria-label="Nawigacja">
       <HashLink
         to="/#strona-glowna"
         className={styles.logo}

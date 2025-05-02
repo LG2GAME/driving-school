@@ -24,7 +24,12 @@ const DesktopTeam = () => {
       <article className={styles.teamMemberCard()}>
         {instructor && (
           <>
-            <img src={instructor.image} alt="" className={styles.cardImage()} />
+            <img
+              src={instructor.image}
+              alt=""
+              aria-hidden="true"
+              className={styles.cardImage()}
+            />
             <div className={styles.cardContent}>
               <h3 className={styles.cardName}>{instructor.name}</h3>
               <p className={styles.cardRole}>{instructor.role}</p>
@@ -36,7 +41,7 @@ const DesktopTeam = () => {
       <ContentWrapper direction="row">
         {instructorsData.map(
           ({ id, image, name, role }: InstructorInterface) => (
-            <div
+            <button
               className={styles.teamMemberTile({
                 selected: selectedItem === id,
               })}
@@ -50,7 +55,7 @@ const DesktopTeam = () => {
                   <p className={styles.profileRole}>{role}</p>
                 </div>
               )}
-            </div>
+            </button>
           )
         )}
       </ContentWrapper>

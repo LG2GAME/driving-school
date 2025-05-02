@@ -1,6 +1,7 @@
 import { Card, TextBlock } from "@components/ui";
 
 import { useMediaQuery } from "@hooks/useMediaQuery";
+import { useFocus } from "@hooks/useFocus";
 
 import * as styles from "./Contact.css";
 import { mq } from "@styles/theme.css";
@@ -9,9 +10,15 @@ import { icons } from "@assets/icons/icons";
 
 const Contact = () => {
   const isDesktop: boolean = !useMediaQuery(mq.lg);
+  const wrapperRef = useFocus("#kontakt");
 
   return (
-    <footer className={styles.contactWrapper} id="kontakt">
+    <footer
+      className={styles.contactWrapper}
+      id="kontakt"
+      ref={wrapperRef}
+      tabIndex={-1}
+    >
       <ContentWrapper>
         <TextBlock
           header="Porozmawiajmy o Twojej przyszłości za kierownicą!"
@@ -28,7 +35,7 @@ const Contact = () => {
           <div>
             <h3 className={styles.contactHeading}>Zadzwoń do nas</h3>
             <Card variant="contact">
-              <img src={icons.telIco} alt="" width={45} />
+              <img src={icons.telIco} alt="" aria-hidden="true" width={45} />
               <a href="tel:+123456789" className={styles.contactPhoneNumber}>
                 123 456 789
               </a>
@@ -39,7 +46,7 @@ const Contact = () => {
               lub napisz do nas na WhatsApp
             </h3>
             <Card variant="contact">
-              <img src={icons.txtIco} alt="" width={45} />
+              <img src={icons.txtIco} alt="" aria-hidden="true" width={45} />
               <a
                 href="https://wa.me/123456789"
                 className={styles.contactPhoneNumber}

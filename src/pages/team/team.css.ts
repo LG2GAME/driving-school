@@ -103,6 +103,7 @@ export const teamMemberTile = recipe({
     position: "relative",
     width: "100%",
     cursor: "pointer",
+    border: 0,
   },
   variants: {
     selected: {

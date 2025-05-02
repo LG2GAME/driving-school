@@ -1,5 +1,7 @@
 import { ReactNode } from "react";
 
+import { useFocus } from "@hooks/useFocus";
+
 import * as styles from "./wrapper.css";
 
 type WrapperProps = {
@@ -8,10 +10,19 @@ type WrapperProps = {
   id?: string;
 };
 
-const Wrapper = ({ children, direction = "row", id }: WrapperProps) => (
-  <section className={styles.wrapper({ direction })} id={id}>
-    {children}
-  </section>
-);
+const Wrapper = ({ children, direction = "row", id }: WrapperProps) => {
+  const wrapperRef = useFocus(`#${id}`);
+
+  return (
+    <section
+      className={styles.wrapper({ direction })}
+      id={id}
+      ref={wrapperRef}
+      tabIndex={-1}
+    >
+      {children}
+    </section>
+  );
+};
 
 export default Wrapper;
