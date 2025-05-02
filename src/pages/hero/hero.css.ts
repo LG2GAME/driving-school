@@ -5,15 +5,15 @@ export const featuresList = style({
   alignItems: "start",
   display: "flex",
   flexDirection: "column",
-  gap: 20,
+  gap: vars.space.gap.sm,
   textAlign: "start",
 });
 
 export const featureItem = style({
   alignItems: "center",
   display: "flex",
-  fontSize: vars.fs.paragraphSm,
-  gap: 15,
+  fontSize: vars.fs.xs,
+  gap: vars.space.gap.sm,
 });
 
 export const imageWrapper = style({

@@ -4,7 +4,7 @@ import { style } from "@vanilla-extract/css";
 export const offerDetails = style({
   display: "flex",
   flexDirection: "column",
-  gap: 60,
+  gap: vars.space.gap.xl,
 });
 
 export const offerArrow = style({
@@ -17,7 +17,7 @@ export const offerArrow = style({
 export const offerHeader = style({
   display: "flex",
   alignItems: "center",
-  gap: 30,
+  gap: vars.space.gap.md,
 
   "@media": {
     [mq.xs]: {
@@ -28,20 +28,20 @@ export const offerHeader = style({
 });
 
 export const offerTitle = style({
-  fontSize: vars.fs.heading,
+  fontSize: vars.fs.xl,
 });
 
 export const offerDescription = style({
-  fontSize: vars.fs.paragraphSm,
+  fontSize: vars.fs.xs,
 });
 
 export const offerList = style({
-  fontSize: vars.fs.paragraphSm,
+  fontSize: vars.fs.xs,
   listStyleType: "disc",
   paddingLeft: 30,
 });
 
 export const offerPrice = style({
-  fontSize: vars.fs.paragraphSm,
-  fontWeight: 600,
+  fontSize: vars.fs.xs,
+  fontWeight: vars.fw.bold,
 });

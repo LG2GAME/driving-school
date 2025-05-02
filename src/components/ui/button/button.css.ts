@@ -3,16 +3,11 @@ import { vars } from "@styles/theme.css";
 
 export const button = style({
   backgroundColor: vars.colors.blue,
-  borderRadius: 99,
+  borderRadius: vars.radius.xl,
   color: vars.colors.white,
   display: "flex",
   fontSize: "clamp(16px, 3.5vw, 20px)",
-  fontWeight: 500,
-  padding: "clamp(5px, 2vw, 10px) clamp(20px, 5vw, 40px)",
-  transition: vars.transition.base,
+  fontWeight: vars.fw.medium,
+  padding: vars.space.margin.sm,
   border: 0,
-
-  ":hover": {
-    transform: vars.scale.sm,
-  },
 });

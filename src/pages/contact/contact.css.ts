@@ -4,8 +4,8 @@ import { style } from "@vanilla-extract/css";
 export const contactWrapper = style({
   display: "flex",
   flexDirection: "row",
-  gap: 60,
-  padding: vars.space.sm,
+  gap: vars.space.gap.xl,
+  padding: vars.space.margin.lg,
 
   "@media": {
     [mq.lg]: {
@@ -17,15 +17,15 @@ export const contactWrapper = style({
 export const contactContainer = style({
   display: "flex",
   flexDirection: "column",
-  gap: 45,
+  gap: vars.space.gap.lg,
 });
 
 export const contactHeading = style({
-  fontSize: vars.fs.headingSm,
-  fontWeight: 500,
+  fontSize: vars.fs.md,
+  fontWeight: vars.fw.medium,
 });
 
 export const contactPhoneNumber = style({
-  fontSize: vars.fs.headingMd,
-  fontWeight: 600,
+  fontSize: vars.fs.lg,
+  fontWeight: vars.fw.bold,
 });

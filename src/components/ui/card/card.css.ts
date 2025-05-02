@@ -3,12 +3,12 @@ import { recipe } from "@vanilla-extract/recipes";
 
 export const card = recipe({
   base: {
-    borderRadius: vars.radius.default,
+    borderRadius: vars.radius.xs,
     boxShadow: vars.shadows.base,
     display: "flex",
     flexDirection: "column",
-    gap: 30,
-    padding: vars.space.xs,
+    gap: vars.space.gap.md,
+    padding: vars.space.margin.mdlg,
     width: "100%",
     marginBottom: "var(--step-spacing, 0)",
   },
@@ -20,7 +20,7 @@ export const card = recipe({
         textAlign: "center",
       },
       contact: {
-        padding: vars.space.xsV,
+        padding: vars.space.margin.md,
         flexDirection: "row",
         alignItems: "center",
       },

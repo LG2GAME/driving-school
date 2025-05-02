@@ -4,35 +4,35 @@ import { style } from "@vanilla-extract/css";
 export const cardHeaderWrapper = style({
   display: "flex",
   alignItems: "center",
-  gap: 30,
+  gap: vars.space.gap.md,
 
   "@media": {
     [mq.xs]: {
       flexDirection: "column",
       alignItems: "start",
-      gap: 5,
+      gap: vars.space.gap.xs,
     },
   },
 });
 
 export const cardIndex = style({
-  fontSize: vars.fs.headingMd,
+  fontSize: vars.fs.lg,
   color: vars.colors.blue,
-  fontWeight: 600,
+  fontWeight: vars.fw.bold,
 });
 
 export const cardTitle = style({
-  fontSize: vars.fs.headingSm,
-  fontWeight: 600,
+  fontSize: vars.fs.md,
+  fontWeight: vars.fw.bold,
 });
 
 export const cardText = style({
-  fontSize: vars.fs.paragraphXs,
-  fontWeight: 500,
+  fontSize: vars.fs.xxs,
+  fontWeight: vars.fw.medium,
 });
 
 export const image = style({
-  borderRadius: vars.radius.default,
+  borderRadius: vars.radius.xs,
   aspectRatio: "3 / 2",
   width: "100%",
 

@@ -5,13 +5,13 @@ import { recipe } from "@vanilla-extract/recipes";
 export const teamMemberCard = recipe({
   base: {
     alignItems: "center",
-    borderRadius: 25,
+    borderRadius: vars.radius.xs,
     boxShadow: vars.shadows.base,
     display: "flex",
     justifyContent: "end",
     minHeight: "50%",
     overflow: "hidden",
-    padding: vars.space.sm,
+    padding: vars.space.margin.md,
     position: "relative",
     width: "100%",
   },
@@ -80,16 +80,16 @@ export const cardContent = style({
 });
 
 export const cardName = style({
-  fontSize: vars.fs.headingSm,
+  fontSize: vars.fs.md,
 });
 
 export const cardRole = style({
-  fontSize: vars.fs.paragraphSm,
+  fontSize: vars.fs.xs,
 });
 
 export const cardDescription = style({
-  fontSize: vars.fs.paragraphXs,
-  marginTop: 30,
+  fontSize: vars.fs.xxs,
+  marginTop: vars.space.margin.xs,
 });
 
 export const teamMemberTile = recipe({
@@ -98,7 +98,7 @@ export const teamMemberTile = recipe({
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "200%",
-    borderRadius: "45%",
+    borderRadius: vars.radius.xl,
     overflow: "hidden",
     position: "relative",
     width: "100%",
@@ -124,20 +124,20 @@ export const tileContent = style({
   color: vars.colors.white,
   display: "flex",
   flexDirection: "column",
-  gap: 30,
+  gap: vars.space.gap.md,
   height: "100%",
   justifyContent: "end",
-  padding: vars.space.tile,
+  padding: vars.space.margin.xl,
   position: "relative",
   textAlign: "center",
 });
 
 export const profileName = style({
-  fontSize: vars.fs.headingSm,
+  fontSize: vars.fs.md,
 });
 
 export const profileRole = style({
-  fontSize: vars.fs.paragraphSm,
-  fontWeight: 300,
+  fontSize: vars.fs.xs,
+  fontWeight: vars.fw.light,
   width: "70%",
 });

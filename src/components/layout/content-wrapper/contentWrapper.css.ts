@@ -1,4 +1,4 @@
-import { mq } from "@styles/theme.css";
+import { mq, vars } from "@styles/theme.css";
 import { recipe } from "@vanilla-extract/recipes";
 
 export const contentWrapper = recipe({
@@ -16,12 +16,12 @@ export const contentWrapper = recipe({
       content: {
         display: "flex",
         justifyContent: "center",
-        gap: 40,
+        gap: vars.space.gap.lg,
       },
       grid: {
         alignItems: "center",
         display: "grid",
-        gap: 10,
+        gap: vars.space.gap.xs,
         gridTemplateColumns:
           "repeat( auto-fit, minmax(calc(50% - 10px), 1fr) )",
         height: "80%",

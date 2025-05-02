@@ -1,14 +1,6 @@
 import { globalStyle } from "@vanilla-extract/css";
 import { vars } from "./theme.css";
 
-// ["*", "*::before", "*::after"].forEach((selector) => {
-//   globalStyle(selector, {
-//     boxSizing: "border-box",
-//     margin: 0,
-//     padding: 0,
-//   });
-// });
-
 globalStyle("*, *::before, *::after", {
   boxSizing: "border-box",
   margin: 0,

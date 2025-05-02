@@ -6,13 +6,13 @@ export const navigation = style({
   alignItems: "center",
   display: "flex",
   flexWrap: "wrap",
-  padding: vars.space.sm,
+  padding: vars.space.margin.lg,
 });
 
 export const burger = style({
   display: "none",
   flexDirection: "column",
-  gap: 3,
+  gap: vars.space.gap.burger,
   marginLeft: "auto",
   width: 25,
   zIndex: 2,
@@ -25,14 +25,14 @@ export const burger = style({
 });
 globalStyle(`${burger} span`, {
   backgroundColor: vars.colors.black,
-  borderRadius: 99,
+  borderRadius: vars.radius.xl,
   height: 3,
 });
 
 export const logo = style({
   textAlign: "center",
-  fontSize: vars.fs.headingMd,
-  fontWeight: 600,
+  fontSize: vars.fs.lg,
+  fontWeight: vars.fw.bold,
   zIndex: 2,
 });
 
@@ -40,7 +40,7 @@ export const menu = recipe({
   base: {
     display: "flex",
     alignItems: "center",
-    gap: 30,
+    gap: vars.space.gap.md,
     marginLeft: "auto",
 
     "@media": {
@@ -65,8 +65,8 @@ export const menu = recipe({
 });
 
 export const menuItem = style({
-  fontSize: vars.fs.paragraphSm,
-  fontWeight: 500,
+  fontSize: vars.fs.xs,
+  fontWeight: vars.fw.medium,
   color: vars.colors.blackMid,
 
   "@media": {
