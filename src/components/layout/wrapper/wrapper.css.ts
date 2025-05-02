@@ -15,7 +15,7 @@ export const wrapper = recipe({
 
     "@media": {
       [mq.lg]: {
-        height: "100%",
+        minHeight: "100%",
       },
     },
   },

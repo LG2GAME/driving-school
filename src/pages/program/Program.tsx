@@ -5,6 +5,7 @@ import { useMediaQuery } from "@hooks/useMediaQuery";
 
 import { programData } from "@assets/data";
 import { mq } from "@styles/theme.css";
+import * as styles from "./program.css";
 
 interface ProgramStepInterface {
   id: number;
@@ -32,8 +33,8 @@ const Program = () => {
               stepSpacing={isDesktop ? (id - 1) * 45 : undefined}
             >
               <img src={icon} alt="" aria-hidden="true" />
-              <h3>{title}</h3>
-              <p>{description}</p>
+              <h3 className={styles.programTitle}>{title}</h3>
+              <p className={styles.programDescription}>{description}</p>
             </Card>
           )
         )}

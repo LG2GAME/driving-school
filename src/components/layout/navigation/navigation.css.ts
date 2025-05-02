@@ -10,14 +10,14 @@ export const navigation = style({
 });
 
 export const burger = style({
+  backgroundColor: "transparent",
   display: "none",
   flexDirection: "column",
   gap: vars.space.gap.burger,
+  height: "max-content",
   marginLeft: "auto",
   width: 25,
   zIndex: 2,
-  backgroundColor: "transparent",
-  height: "max-content",
 
   "@media": {
     [mq.lg]: { display: "flex" },
@@ -38,21 +38,21 @@ export const logo = style({
 
 export const menu = recipe({
   base: {
-    display: "flex",
     alignItems: "center",
+    display: "flex",
     gap: vars.space.gap.md,
     marginLeft: "auto",
 
     "@media": {
       [mq.lg]: {
         backgroundColor: vars.colors.white,
+        flexDirection: "column",
+        height: "100%",
+        justifyContent: "center",
+        left: 0,
         position: "absolute",
         top: 0,
-        left: 0,
         width: "100%",
-        height: "100%",
-        flexDirection: "column",
-        justifyContent: "center",
       },
     },
   },
@@ -65,9 +65,12 @@ export const menu = recipe({
 });
 
 export const menuItem = style({
+  color: vars.colors.blackMid,
   fontSize: vars.fs.xs,
   fontWeight: vars.fw.medium,
-  color: vars.colors.blackMid,
+  transition: vars.tranistion.base,
+
+  ":hover": { color: vars.colors.black },
 
   "@media": {
     [mq.lg]: { color: vars.colors.black },

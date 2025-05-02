@@ -98,21 +98,35 @@ export const teamMemberTile = recipe({
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "200%",
+    border: 0,
     borderRadius: vars.radius.xl,
+    cursor: "pointer",
     overflow: "hidden",
     position: "relative",
     width: "100%",
-    cursor: "pointer",
-    border: 0,
+
+    selectors: {
+      "&::before": {
+        borderRadius: "inherit",
+        content: "",
+        inset: 0,
+        position: "absolute",
+        transition: vars.tranistion.base,
+      },
+      "&:hover::before": {
+        backgroundColor: "rgba(0, 0, 0, 0.45)",
+      },
+    },
   },
   variants: {
     selected: {
       true: {
-        "::before": {
-          backgroundColor: "rgba(0, 0, 0, 0.45)",
-          content: "",
-          inset: 0,
-          position: "absolute",
+        cursor: "default",
+
+        selectors: {
+          "&::before": {
+            backgroundColor: "rgba(0, 0, 0, 0.45)",
+          },
         },
       },
     },

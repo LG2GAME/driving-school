@@ -12,11 +12,32 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const isMobile: boolean = useMediaQuery(mq.lg);
 
-  const toggleNavigation = useCallback(() => setIsOpen((prev) => !prev), []);
+  const manageMobileMenu = useCallback(
+    (shouldOpen: boolean) => {
+      setIsOpen(shouldOpen);
+      if (isMobile) {
+        if (shouldOpen) {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+          document.body.style.overflow = "hidden";
+        } else {
+          document.body.style.overflow = "auto";
+        }
+      } else {
+        document.body.style.overflow = "auto";
+      }
+    },
+    [isMobile]
+  );
+
+  const toggleNavigation = useCallback(() => {
+    manageMobileMenu(!isOpen);
+  }, [isOpen, manageMobileMenu]);
 
   useEffect(() => {
-    if (isMobile) document.body.style.overflow = isOpen ? "hidden" : "auto";
-  }, [isMobile, isOpen]);
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
 
   const Burger = () => (
     <div

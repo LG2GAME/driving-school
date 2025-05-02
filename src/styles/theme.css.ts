@@ -50,7 +50,13 @@ export const vars = createGlobalTheme(":root", {
       xl: "clamp(20px, 6vw, 45px) 0",
     },
   },
+  scale: {
+    sm: "1.025",
+  },
   shadows: {
     base: "0 6px 12px rgba(0, 0, 0, 0.08)",
+  },
+  tranistion: {
+    base: "all 0.3s ease",
   },
 });

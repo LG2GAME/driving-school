@@ -17,6 +17,7 @@ export const card = recipe({
       centered: {
         alignItems: "center",
         justifyContent: "center",
+        height: "100%",
         textAlign: "center",
       },
       contact: {
