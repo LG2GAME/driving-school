@@ -52,11 +52,12 @@ export const vars = createGlobalTheme(":root", {
   },
   scale: {
     sm: "1.025",
+    md: "1.05",
   },
   shadows: {
     base: "0 6px 12px rgba(0, 0, 0, 0.08)",
   },
-  tranistion: {
+  transition: {
     base: "all 0.3s ease",
   },
 });

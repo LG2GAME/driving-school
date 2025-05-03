@@ -12,6 +12,13 @@ export const offerArrow = style({
   appearance: "none",
   background: "transparent",
   border: 0,
+  transition: vars.transition.base,
+
+  selectors: {
+    "&:hover": {
+      scale: vars.scale.md,
+    },
+  },
 });
 
 export const offerHeader = style({

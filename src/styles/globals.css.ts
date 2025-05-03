@@ -9,6 +9,10 @@ globalStyle("*, *::before, *::after", {
   WebkitFontSmoothing: "antialiased",
 });
 
+globalStyle("html", {
+  scrollBehavior: "smooth",
+});
+
 globalStyle("body", {
   backgroundColor: vars.colors.white,
   color: vars.colors.black,

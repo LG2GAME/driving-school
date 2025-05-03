@@ -28,4 +28,5 @@ export const contactHeading = style({
 export const contactPhoneNumber = style({
   fontSize: vars.fs.lg,
   fontWeight: vars.fw.bold,
+  transition: vars.transition.base,
 });

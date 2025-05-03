@@ -103,15 +103,19 @@ export const teamMemberTile = recipe({
     cursor: "pointer",
     overflow: "hidden",
     position: "relative",
+    transition: vars.transition.base,
     width: "100%",
 
     selectors: {
+      "&:hover": {
+        scale: vars.scale.sm,
+      },
       "&::before": {
         borderRadius: "inherit",
         content: "",
         inset: 0,
         position: "absolute",
-        transition: vars.tranistion.base,
+        transition: vars.transition.base,
       },
       "&:hover::before": {
         backgroundColor: "rgba(0, 0, 0, 0.45)",
@@ -124,6 +128,9 @@ export const teamMemberTile = recipe({
         cursor: "default",
 
         selectors: {
+          "&:hover": {
+            scale: 1,
+          },
           "&::before": {
             backgroundColor: "rgba(0, 0, 0, 0.45)",
           },

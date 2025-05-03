@@ -68,9 +68,11 @@ export const menuItem = style({
   color: vars.colors.blackMid,
   fontSize: vars.fs.xs,
   fontWeight: vars.fw.medium,
-  transition: vars.tranistion.base,
+  transition: vars.transition.base,
 
-  ":hover": { color: vars.colors.black },
+  selectors: {
+    "&:hover": { color: vars.colors.black },
+  },
 
   "@media": {
     [mq.lg]: { color: vars.colors.black },

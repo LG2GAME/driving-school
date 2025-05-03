@@ -11,7 +11,7 @@ export const button = style({
   fontSize: "clamp(16px, 3.5vw, 20px)",
   fontWeight: vars.fw.medium,
   padding: vars.space.margin.sm,
-  transition: vars.tranistion.base,
+  transition: vars.transition.base,
 
   ":hover": { scale: vars.scale.sm },
 });

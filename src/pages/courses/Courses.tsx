@@ -36,19 +36,16 @@ const Courses = () => {
           description="Oferujemy kursy dostosowane do Twoich potrzeb – dla początkujących i tych, którzy chcą odświeżyć umiejętności, z profesjonalnymi instruktorami, elastycznymi godzinami i komfortowymi pojazdami."
         />
       </ContentWrapper>
-
-      {selectedOffer === null ? (
-        <ContentWrapper variant="grid">
+      <ContentWrapper variant="grid">
+        {selectedOffer === null ? (
           <CourseList onSelect={handleSelectOffer} />
-        </ContentWrapper>
-      ) : (
-        <ContentWrapper>
+        ) : (
           <CourseDetails
             course={coursesData[selectedOffer]}
             onBack={handleBack}
           />
-        </ContentWrapper>
-      )}
+        )}
+      </ContentWrapper>
     </Wrapper>
   );
 };

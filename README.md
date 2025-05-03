@@ -18,9 +18,9 @@ Strona jest w fazie deweloperskiej. Pełna funkcjonalność i zawartość będą
 ## Funkcjonalności
 
 - **Sekcje strony**: Home, Dlaczego My?, Oferta, O Nas, Plan szkoleniowy, Kontakt
-- **Responsywność**: Strona jest zaprojektowana z myślą o urządzeniach mobilnych i będzie dostosowywana do różnych rozdzielczości w miarę rozwoju projektu.
-- **Nawigacja**: Użytkownicy będą mogli łatwo przechodzić pomiędzy sekcjami strony za pomocą menu.
-- **Animacje**: Zaplanowano animacje dla niektórych elementów, takich jak powiększenie guzika po najechaniu czy płynna zmiana kart (w trakcie realizacji).
+- **Responsywność**: Strona jest zaprojektowana z myślą o urządzeniach mobilnych i jest dostosowywana do różnych rozdzielczości.
+- **Nawigacja**: Użytkownik może łatwo poruszać się po stronie przy użyciu nawigacji.
+- **Animacje**: Dostępne subtelne animacje - powiększenie guzika po najechani, zmiana koloru tła.
 
 ## Instrukcje uruchomienia projektu (dla dewelopera)
 
@@ -131,7 +131,8 @@ src
    │   │   └───hero.css.ts
    │   ├───index.ts
    │   ├───program
-   │   │   └───Program.tsx
+   │   │   ├───Program.tsx
+   │   │   └───program.css.ts
    │   └───team
    │       ├───Team.tsx
    │       ├───desktop-team

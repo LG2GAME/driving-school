@@ -19,14 +19,12 @@ export const contentWrapper = recipe({
         gap: vars.space.gap.lg,
       },
       grid: {
-        alignItems: "center",
         display: "grid",
         gap: vars.space.gap.xs,
         gridTemplateColumns:
           "repeat( auto-fit, minmax(calc(50% - 10px), 1fr) )",
         height: "80%",
         margin: "auto",
-        textAlign: "center",
 
         "@media": {
           [mq.xs]: {
