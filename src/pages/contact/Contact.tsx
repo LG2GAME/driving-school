@@ -36,8 +36,8 @@ const Contact = () => {
             <h3 className={styles.contactHeading}>Zadzwoń do nas</h3>
             <Card variant="contact">
               <img src={icons.telIco} alt="" aria-hidden="true" width={45} />
-              <a href="tel:+123456789" className={styles.contactPhoneNumber}>
-                123 456 789
+              <a href="tel:+48502171120" className={styles.contactPhoneNumber}>
+                502 171 120
               </a>
             </Card>
           </div>
@@ -48,11 +48,11 @@ const Contact = () => {
             <Card variant="contact">
               <img src={icons.txtIco} alt="" aria-hidden="true" width={45} />
               <a
-                href="https://wa.me/123456789"
+                href="https://wa.me/502171120"
                 className={styles.contactPhoneNumber}
                 target="_blank"
               >
-                123 456 789
+                502 171 120
               </a>
             </Card>
           </div>
