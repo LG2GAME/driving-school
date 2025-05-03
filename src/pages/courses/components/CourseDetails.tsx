@@ -1,3 +1,4 @@
+import { RefObject } from "react";
 import { CourseInterface } from "../Courses";
 
 import * as styles from "../courses.css";
@@ -6,10 +7,15 @@ import { icons } from "@assets/icons/icons";
 type CourseDetailsProps = {
   course: CourseInterface;
   onBack: () => void;
+  detailsRef: RefObject<HTMLDivElement | null>;
 };
 
-export const CourseDetails = ({ course, onBack }: CourseDetailsProps) => (
-  <div className={styles.offerDetails}>
+export const CourseDetails = ({
+  course,
+  onBack,
+  detailsRef,
+}: CourseDetailsProps) => (
+  <div className={styles.offerDetails} ref={detailsRef}>
     <div className={styles.offerHeader}>
       <button
         className={styles.offerArrow}

@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 
 import { ContentWrapper, Wrapper } from "@components/layout";
 import { CourseDetails } from "./components/CourseDetails";
@@ -20,13 +20,25 @@ export interface CourseInterface {
 const Courses = () => {
   const isDesktop: boolean = !useMediaQuery(mq.lg);
   const [selectedOffer, setSelectedOffer] = useState<number | null>(null);
+  const detailsRef = useRef<HTMLDivElement>(null);
 
-  const handleSelectOffer = useCallback((index: number) => {
-    setSelectedOffer(index);
-  }, []);
-  const handleBack = useCallback(() => {
-    setSelectedOffer(null);
-  }, []);
+  const handleSelectOffer = useCallback(
+    (index: number) => {
+      setSelectedOffer(index);
+      if (!isDesktop)
+        setTimeout(
+          () =>
+            detailsRef.current?.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            }),
+          1
+        );
+    },
+    [isDesktop]
+  );
+
+  const handleBack = () => setSelectedOffer(null);
 
   return (
     <Wrapper direction={isDesktop ? "row" : "column"} id="kursy">
@@ -43,6 +55,7 @@ const Courses = () => {
           <CourseDetails
             course={coursesData[selectedOffer]}
             onBack={handleBack}
+            detailsRef={detailsRef}
           />
         )}
       </ContentWrapper>
