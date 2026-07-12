@@ -1,7 +1,7 @@
-import drvImg from './kierowca.png'
-import beneImg from './benefity.png'
-import teamImg from './druzyna.png'
-import instr1Img from './szarek.png'
+import drvImg from './kierowca.webp'
+import beneImg from './benefity.webp'
+import teamImg from './druzyna.webp'
+import instr1Img from './instruktor.webp'
 
 export const images = {
   drvImg,
