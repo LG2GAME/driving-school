@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin'
 import path from 'path'
 import react from '@vitejs/plugin-react'
-import {ViteImageOptimizer} from "vite-plugin-image-optimizer";
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 
 export default defineConfig({
   plugins: [react(), vanillaExtractPlugin(), ViteImageOptimizer()],
