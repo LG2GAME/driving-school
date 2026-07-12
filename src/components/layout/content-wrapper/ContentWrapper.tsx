@@ -1,26 +1,26 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react'
 
-import * as styles from "./contentWrapper.css";
+import * as styles from './contentWrapper.css'
 
 type ContentWrapperProps = {
-  children: ReactNode;
-  variant?: "content" | "grid";
-  direction?: "column" | "row" | "rowEnd";
-};
+  children: ReactNode
+  variant?: 'content' | 'grid'
+  direction?: 'column' | 'row' | 'rowEnd'
+}
 
 const ContentWrapper = ({
   children,
-  variant = "content",
-  direction = "column",
+  variant = 'content',
+  direction = 'column'
 }: ContentWrapperProps) => (
   <section
     className={styles.contentWrapper({
       variant: variant,
-      direction: direction,
+      direction: direction
     })}
   >
     {children}
   </section>
-);
+)
 
-export default ContentWrapper;
+export default ContentWrapper

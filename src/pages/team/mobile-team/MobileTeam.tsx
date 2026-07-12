@@ -1,15 +1,15 @@
-import { ContentWrapper } from "@components/layout";
+import { ContentWrapper } from '@components/layout'
 
-import { InstructorInterface } from "../Team";
+import { InstructorInterface } from '../Team'
 
-import { instructorsData } from "@assets/data";
-import * as styles from "../team.css";
+import { instructorsData } from '@assets/data'
+import * as styles from '../team.css'
 
 const MobileTeam = () => (
   <ContentWrapper>
     {instructorsData.map(
       ({ id, image, name, role, description }: InstructorInterface) => {
-        const isReverse = id % 2 === 0;
+        const isReverse = id % 2 === 0
 
         return (
           <article
@@ -27,10 +27,10 @@ const MobileTeam = () => (
               <p className={styles.cardDescription}>{description}</p>
             </div>
           </article>
-        );
+        )
       }
     )}
   </ContentWrapper>
-);
+)
 
-export default MobileTeam;
+export default MobileTeam

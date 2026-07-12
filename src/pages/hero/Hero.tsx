@@ -1,15 +1,15 @@
-import { ContentWrapper, Wrapper } from "@components/layout";
-import { TextBlock } from "@components/ui";
+import { ContentWrapper, Wrapper } from '@components/layout'
+import { TextBlock } from '@components/ui'
 
-import { useMediaQuery } from "@hooks/useMediaQuery";
+import { useMediaQuery } from '@hooks/useMediaQuery'
 
-import { icons } from "@assets/icons/icons";
-import { images } from "@assets/images/images";
-import { mq } from "@styles/theme.css";
-import * as styles from "./hero.css";
+import { icons } from '@assets/icons/icons'
+import { images } from '@assets/images/images'
+import { mq } from '@styles/theme.css'
+import * as styles from './hero.css'
 
 const Hero = () => {
-  const isDesktop: boolean = !useMediaQuery(mq.lg);
+  const isDesktop: boolean = !useMediaQuery(mq.lg)
 
   return (
     <Wrapper id="strona-glowna">
@@ -41,7 +41,7 @@ const Hero = () => {
         />
       </div>
     </Wrapper>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

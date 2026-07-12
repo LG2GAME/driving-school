@@ -1,13 +1,13 @@
-import { Button, Card } from "@components/ui";
+import { Button, Card } from '@components/ui'
 
-import { CourseInterface } from "../Courses";
+import { CourseInterface } from '../Courses'
 
-import { coursesData } from "@assets/data";
-import { icons } from "@assets/icons/icons";
+import { coursesData } from '@assets/data'
+import { icons } from '@assets/icons/icons'
 
 type CourseListProps = {
-  onSelect: (index: number) => void;
-};
+  onSelect: (index: number) => void
+}
 
 export const CourseList = ({ onSelect }: CourseListProps) => (
   <>
@@ -27,4 +27,4 @@ export const CourseList = ({ onSelect }: CourseListProps) => (
       </Card>
     ))}
   </>
-);
+)

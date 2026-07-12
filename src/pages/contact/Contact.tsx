@@ -1,16 +1,16 @@
-import { Card, TextBlock } from "@components/ui";
+import { Card, TextBlock } from '@components/ui'
 
-import { useMediaQuery } from "@hooks/useMediaQuery";
-import { useFocus } from "@hooks/useFocus";
+import { useMediaQuery } from '@hooks/useMediaQuery'
+import { useFocus } from '@hooks/useFocus'
 
-import { ContentWrapper } from "@components/layout";
-import { icons } from "@assets/icons/icons";
-import { mq } from "@styles/theme.css";
-import * as styles from "./contact.css";
+import { ContentWrapper } from '@components/layout'
+import { icons } from '@assets/icons/icons'
+import { mq } from '@styles/theme.css'
+import * as styles from './contact.css'
 
 const Contact = () => {
-  const isDesktop: boolean = !useMediaQuery(mq.lg);
-  const wrapperRef = useFocus("#kontakt");
+  const isDesktop: boolean = !useMediaQuery(mq.lg)
+  const wrapperRef = useFocus('#kontakt')
 
   return (
     <footer
@@ -59,7 +59,7 @@ const Contact = () => {
         </div>
       </ContentWrapper>
     </footer>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

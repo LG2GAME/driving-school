@@ -1,19 +1,19 @@
-import { RefObject } from "react";
-import { CourseInterface } from "../Courses";
+import { RefObject } from 'react'
+import { CourseInterface } from '../Courses'
 
-import * as styles from "../courses.css";
-import { icons } from "@assets/icons/icons";
+import * as styles from '../courses.css'
+import { icons } from '@assets/icons/icons'
 
 type CourseDetailsProps = {
-  course: CourseInterface;
-  onBack: () => void;
-  detailsRef: RefObject<HTMLDivElement | null>;
-};
+  course: CourseInterface
+  onBack: () => void
+  detailsRef: RefObject<HTMLDivElement | null>
+}
 
 export const CourseDetails = ({
   course,
   onBack,
-  detailsRef,
+  detailsRef
 }: CourseDetailsProps) => (
   <div className={styles.offerDetails} ref={detailsRef}>
     <div className={styles.offerHeader}>
@@ -34,4 +34,4 @@ export const CourseDetails = ({
     </ul>
     <p className={styles.offerPrice}>Cena kursu: {course.price} zł</p>
   </div>
-);
+)

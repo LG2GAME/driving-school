@@ -1,47 +1,47 @@
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useRef, useState } from 'react'
 
-import { ContentWrapper, Wrapper } from "@components/layout";
-import { CourseDetails } from "./components/CourseDetails";
-import { CourseList } from "./components/CourseList";
-import { TextBlock } from "@components/ui";
+import { ContentWrapper, Wrapper } from '@components/layout'
+import { CourseDetails } from './components/CourseDetails'
+import { CourseList } from './components/CourseList'
+import { TextBlock } from '@components/ui'
 
-import { useMediaQuery } from "@hooks/useMediaQuery";
+import { useMediaQuery } from '@hooks/useMediaQuery'
 
-import { mq } from "@styles/theme.css";
-import { coursesData } from "@assets/data";
+import { mq } from '@styles/theme.css'
+import { coursesData } from '@assets/data'
 
 export interface CourseInterface {
-  title: string;
-  description: string;
-  list: string[];
-  price: number;
+  title: string
+  description: string
+  list: string[]
+  price: number
 }
 
 const Courses = () => {
-  const isDesktop: boolean = !useMediaQuery(mq.lg);
-  const [selectedOffer, setSelectedOffer] = useState<number | null>(null);
-  const detailsRef = useRef<HTMLDivElement>(null);
+  const isDesktop: boolean = !useMediaQuery(mq.lg)
+  const [selectedOffer, setSelectedOffer] = useState<number | null>(null)
+  const detailsRef = useRef<HTMLDivElement>(null)
 
   const handleSelectOffer = useCallback(
     (index: number) => {
-      setSelectedOffer(index);
+      setSelectedOffer(index)
       if (!isDesktop)
         setTimeout(
           () =>
             detailsRef.current?.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
+              behavior: 'smooth',
+              block: 'start'
             }),
           1
-        );
+        )
     },
     [isDesktop]
-  );
+  )
 
-  const handleBack = () => setSelectedOffer(null);
+  const handleBack = () => setSelectedOffer(null)
 
   return (
-    <Wrapper direction={isDesktop ? "row" : "column"} id="kursy">
+    <Wrapper direction={isDesktop ? 'row' : 'column'} id="kursy">
       <ContentWrapper>
         <TextBlock
           header="Oferowane Kursy"
@@ -60,7 +60,7 @@ const Courses = () => {
         )}
       </ContentWrapper>
     </Wrapper>
-  );
-};
+  )
+}
 
-export default Courses;
+export default Courses

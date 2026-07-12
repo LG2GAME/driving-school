@@ -1,26 +1,26 @@
-import { ContentWrapper, Wrapper } from "@components/layout";
-import { TextBlock } from "@components/ui";
+import { ContentWrapper, Wrapper } from '@components/layout'
+import { TextBlock } from '@components/ui'
 
-import { useMediaQuery } from "@hooks/useMediaQuery";
-import DesktopTeam from "./desktop-team/DesktopTeam";
-import MobileTeam from "./mobile-team/MobileTeam";
+import { useMediaQuery } from '@hooks/useMediaQuery'
+import DesktopTeam from './desktop-team/DesktopTeam'
+import MobileTeam from './mobile-team/MobileTeam'
 
-import { images } from "@assets/images/images";
-import { mq } from "@styles/theme.css";
+import { images } from '@assets/images/images'
+import { mq } from '@styles/theme.css'
 
 export interface InstructorInterface {
-  id: number;
-  image: string;
-  name: string;
-  role: string;
-  description: string;
+  id: number
+  image: string
+  name: string
+  role: string
+  description: string
 }
 
 const Team = () => {
-  const isDesktop: boolean = !useMediaQuery(mq.lg);
+  const isDesktop: boolean = !useMediaQuery(mq.lg)
 
   return (
-    <Wrapper direction={isDesktop ? "row" : "column"} id="o-nas">
+    <Wrapper direction={isDesktop ? 'row' : 'column'} id="o-nas">
       <ContentWrapper>
         <TextBlock
           header="Nasz zespół"
@@ -34,7 +34,7 @@ const Team = () => {
         {isDesktop ? <DesktopTeam /> : <MobileTeam />}
       </ContentWrapper>
     </Wrapper>
-  );
-};
+  )
+}
 
-export default Team;
+export default Team

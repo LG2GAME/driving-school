@@ -1,13 +1,13 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef } from 'react'
 
 export const useFocus = (hash: string) => {
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<HTMLElement>(null)
 
   useEffect(() => {
     if (window.location.hash === hash) {
-      ref.current?.focus();
+      ref.current?.focus()
     }
-  }, [hash]);
+  }, [hash])
 
-  return ref;
-};
+  return ref
+}

@@ -1,23 +1,23 @@
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from 'react'
 
-import { ContentWrapper } from "@components/layout";
+import { ContentWrapper } from '@components/layout'
 
-import { InstructorInterface } from "../Team";
+import { InstructorInterface } from '../Team'
 
-import { instructorsData } from "@assets/data";
-import * as styles from "../team.css";
+import { instructorsData } from '@assets/data'
+import * as styles from '../team.css'
 
 const DesktopTeam = () => {
-  const [selectedItem, setSelectedItem] = useState<number>(1);
+  const [selectedItem, setSelectedItem] = useState<number>(1)
 
   const instructor = useMemo(
     () => instructorsData.find((instructor) => instructor.id === selectedItem),
     [selectedItem]
-  );
+  )
 
   const handleSelect = useCallback((id: number) => {
-    setSelectedItem(id);
-  }, []);
+    setSelectedItem(id)
+  }, [])
 
   return (
     <>
@@ -43,9 +43,9 @@ const DesktopTeam = () => {
           ({ id, image, name, role }: InstructorInterface) => (
             <button
               className={styles.teamMemberTile({
-                selected: selectedItem === id,
+                selected: selectedItem === id
               })}
-              style={{ "--tile-bg": `url(${image})` } as React.CSSProperties}
+              style={{ '--tile-bg': `url(${image})` } as React.CSSProperties}
               onClick={() => handleSelect(id)}
               aria-label={`Wybierz instruktora ${name}`}
             >
@@ -60,7 +60,7 @@ const DesktopTeam = () => {
         )}
       </ContentWrapper>
     </>
-  );
-};
+  )
+}
 
-export default DesktopTeam;
+export default DesktopTeam

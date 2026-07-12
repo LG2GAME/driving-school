@@ -1,23 +1,23 @@
-import { ContentWrapper, Wrapper } from "@components/layout";
-import { Card, TextBlock } from "@components/ui";
+import { ContentWrapper, Wrapper } from '@components/layout'
+import { Card, TextBlock } from '@components/ui'
 
-import { useMediaQuery } from "@hooks/useMediaQuery";
+import { useMediaQuery } from '@hooks/useMediaQuery'
 
-import { benefitsData } from "@assets/data";
-import { images } from "@assets/images/images";
-import { mq } from "@styles/theme.css";
-import * as styles from "./benefits.css";
+import { benefitsData } from '@assets/data'
+import { images } from '@assets/images/images'
+import { mq } from '@styles/theme.css'
+import * as styles from './benefits.css'
 
 interface BenefitsInterface {
-  title: string;
-  text: string;
+  title: string
+  text: string
 }
 
 const Benefits = () => {
-  const isDesktop: boolean = !useMediaQuery(mq.lg);
+  const isDesktop: boolean = !useMediaQuery(mq.lg)
 
   return (
-    <Wrapper direction={isDesktop ? undefined : "columnRev"} id="dlaczego-my">
+    <Wrapper direction={isDesktop ? undefined : 'columnRev'} id="dlaczego-my">
       <ContentWrapper>
         {benefitsData.map(({ title, text }: BenefitsInterface, index) => (
           <Card key={index}>
@@ -41,7 +41,7 @@ const Benefits = () => {
         />
       </ContentWrapper>
     </Wrapper>
-  );
-};
+  )
+}
 
-export default Benefits;
+export default Benefits

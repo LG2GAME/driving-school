@@ -1,17 +1,17 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react'
 
-import { useFocus } from "@hooks/useFocus";
+import { useFocus } from '@hooks/useFocus'
 
-import * as styles from "./wrapper.css";
+import * as styles from './wrapper.css'
 
 type WrapperProps = {
-  children: ReactNode;
-  direction?: "row" | "column" | "rowRev" | "columnRev";
-  id?: string;
-};
+  children: ReactNode
+  direction?: 'row' | 'column' | 'rowRev' | 'columnRev'
+  id?: string
+}
 
-const Wrapper = ({ children, direction = "row", id }: WrapperProps) => {
-  const wrapperRef = useFocus(`#${id}`);
+const Wrapper = ({ children, direction = 'row', id }: WrapperProps) => {
+  const wrapperRef = useFocus(`#${id}`)
 
   return (
     <section
@@ -22,7 +22,7 @@ const Wrapper = ({ children, direction = "row", id }: WrapperProps) => {
     >
       {children}
     </section>
-  );
-};
+  )
+}
 
-export default Wrapper;
+export default Wrapper

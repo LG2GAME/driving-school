@@ -1,3 +1,8 @@
+# Build output
+dist
+dist-ssr
+*.local
+
 # Logs
 logs
 *.log
@@ -23,3 +28,5 @@ updateTree.ts
 *.njsproj
 *.sln
 *.sw?
+
+.eslintcache

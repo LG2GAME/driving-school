@@ -1,21 +1,21 @@
-import { ContentWrapper, Wrapper } from "@components/layout";
-import { Card, TextBlock } from "@components/ui";
+import { ContentWrapper, Wrapper } from '@components/layout'
+import { Card, TextBlock } from '@components/ui'
 
-import { useMediaQuery } from "@hooks/useMediaQuery";
+import { useMediaQuery } from '@hooks/useMediaQuery'
 
-import { programData } from "@assets/data";
-import { mq } from "@styles/theme.css";
-import * as styles from "./program.css";
+import { programData } from '@assets/data'
+import { mq } from '@styles/theme.css'
+import * as styles from './program.css'
 
 interface ProgramStepInterface {
-  id: number;
-  icon: string;
-  title: string;
-  description: string;
+  id: number
+  icon: string
+  title: string
+  description: string
 }
 
 const Program = () => {
-  const isDesktop: boolean = !useMediaQuery(mq.lg);
+  const isDesktop: boolean = !useMediaQuery(mq.lg)
 
   return (
     <Wrapper direction="column">
@@ -25,7 +25,7 @@ const Program = () => {
           description="Każdy krok przybliży Cię do sukcesu za kierownicą – zobacz, jak wygląda Twój kurs."
         />
       </ContentWrapper>
-      <ContentWrapper direction={isDesktop ? "rowEnd" : "column"}>
+      <ContentWrapper direction={isDesktop ? 'rowEnd' : 'column'}>
         {programData.map(
           ({ id, icon, title, description }: ProgramStepInterface) => (
             <Card
@@ -40,7 +40,7 @@ const Program = () => {
         )}
       </ContentWrapper>
     </Wrapper>
-  );
-};
+  )
+}
 
-export default Program;
+export default Program

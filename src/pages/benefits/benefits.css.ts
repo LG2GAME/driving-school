@@ -1,51 +1,51 @@
-import { vars, mq } from "@styles/theme.css";
-import { style } from "@vanilla-extract/css";
+import { vars, mq } from '@styles/theme.css'
+import { style } from '@vanilla-extract/css'
 
 export const cardHeaderWrapper = style({
-  display: "flex",
-  alignItems: "center",
+  display: 'flex',
+  alignItems: 'center',
   gap: vars.space.gap.md,
 
-  "@media": {
+  '@media': {
     [mq.xs]: {
-      flexDirection: "column",
-      alignItems: "start",
-      gap: vars.space.gap.xs,
-    },
-  },
-});
+      flexDirection: 'column',
+      alignItems: 'start',
+      gap: vars.space.gap.xs
+    }
+  }
+})
 
 export const cardIndex = style({
   fontSize: vars.fs.lg,
   color: vars.colors.blue,
-  fontWeight: vars.fw.bold,
-});
+  fontWeight: vars.fw.bold
+})
 
 export const cardTitle = style({
   fontSize: vars.fs.md,
-  fontWeight: vars.fw.bold,
-});
+  fontWeight: vars.fw.bold
+})
 
 export const cardText = style({
   fontSize: vars.fs.xxs,
-  fontWeight: vars.fw.medium,
-});
+  fontWeight: vars.fw.medium
+})
 
 export const image = style({
   borderRadius: vars.radius.xs,
-  aspectRatio: "3 / 2",
-  width: "100%",
+  aspectRatio: '3 / 2',
+  width: '100%',
 
-  "@media": {
+  '@media': {
     [mq.lg]: {
-      width: "70%",
-      margin: "0 auto",
+      width: '70%',
+      margin: '0 auto'
     },
     [mq.md]: {
-      width: "80%",
+      width: '80%'
     },
     [mq.xs]: {
-      width: "100%",
-    },
-  },
-});
+      width: '100%'
+    }
+  }
+})
