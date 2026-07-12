@@ -1,5 +1,5 @@
 import { Navigation } from './components/layout'
-import { Analytics } from '@vercel/analytics/next'
+import { Analytics } from '@vercel/analytics/react'
 import { Hero, Benefits, Courses, Team, Program, Contact } from './pages'
 
 const App = () => {
