@@ -61,7 +61,7 @@ const Navigation = () => {
         className={styles.logo}
         onClick={toggleNavigation}
       >
-        Grzegorz Szarek
+        Szkoła Nauki Jazdy
       </HashLink>
       <Burger />
       <ul
